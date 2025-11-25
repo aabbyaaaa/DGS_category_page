@@ -126,30 +126,107 @@ export default function App() {
           {/* Right Main Content */}
           <main className="lg:col-span-9 min-w-0">
             
-            {/* 1. 微量吸管介紹 (Introduction) - Top Section */}
-            {/* Modified: Flat background, Watermark-style Beaker decoration */}
-            <div className="bg-teal-50 p-6 md:p-8 rounded-xl border border-teal-100 mb-8 relative overflow-hidden shadow-sm">
-                <div className="relative z-10">
-                    <div className="flex items-center gap-2 mb-2 text-teal-600 font-bold text-sm tracking-wide uppercase">
-                        <Info className="w-4 h-4" />
-                        <span>Product Overview</span>
+            {/* === 方案 A：極簡專業風 (Minimalist) === */}
+            <div className="mb-12 relative group">
+                {/* Label for Demo */}
+                <div className="absolute -top-6 left-0 text-[10px] text-teal-600 font-mono tracking-widest bg-teal-50 px-2 py-0.5 rounded">方案 A (極簡風)</div>
+                
+                <div className="pt-4 pb-8 border-b border-slate-100 relative overflow-hidden">
+                    <div className="relative z-10 max-w-2xl">
+                        <div className="flex items-center gap-2 mb-3 text-teal-600 font-bold text-xs tracking-wide uppercase">
+                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                            <span>Product Overview</span>
+                        </div>
+                        <h1 className="text-3xl font-bold text-slate-800 mb-6 inline-block border-b-2 border-teal-500 pb-2">
+                            微量吸管 / 移液槍 (Micropipettes)
+                        </h1>
+                        <p className="text-slate-600 leading-relaxed text-sm md:text-base mb-6">
+                            專為實驗室設計的精密液體處理工具。我們提供 Gilson, Eppendorf, Thermo 等國際大廠品牌，涵蓋單爪、多爪與電動微量吸管，滿足 PCR、細胞培養與分析化學的高精度需求。
+                        </p>
+                        <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+                             <span className="hover:text-teal-600 cursor-pointer">#ISO 8655標準</span>
+                             <span className="text-slate-300">|</span>
+                             <span className="hover:text-teal-600 cursor-pointer">#維修校正</span>
+                             <span className="text-slate-300">|</span>
+                             <span className="hover:text-teal-600 cursor-pointer">#吸管尖耗材</span>
+                        </div>
                     </div>
-                    <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">
-                        微量吸管 / 移液槍 (Micropipettes)
-                    </h1>
-                    <p className="text-slate-600 max-w-2xl leading-relaxed mb-6 text-sm md:text-base">
-                        專為實驗室設計的精密液體處理工具。我們提供 Gilson, Eppendorf, Thermo 等國際大廠品牌，涵蓋單爪、多爪與電動微量吸管，滿足 PCR、細胞培養與分析化學的高精度需求。全系列產品皆符合 ISO 8655 標準，並提供完整的維修校正服務。
-                    </p>
-                    <div className="flex flex-wrap gap-2 text-xs font-medium">
-                        <span className="px-3 py-1.5 bg-white rounded-full border border-teal-200 text-teal-700 shadow-sm">Gilson Pipetman</span>
-                        <span className="px-3 py-1.5 bg-white rounded-full border border-teal-200 text-teal-700 shadow-sm">Eppendorf Research</span>
-                        <span className="px-3 py-1.5 bg-white rounded-full border border-teal-200 text-teal-700 shadow-sm">吸管尖 (Tips)</span>
-                        <span className="px-3 py-1.5 bg-white rounded-full border border-teal-200 text-teal-700 shadow-sm">維修校正</span>
+                    {/* Decorative Icon: Rotate 30deg, W-40 H-40, stroke 1, moved right */}
+                    <div className="absolute -right-12 -bottom-6 pointer-events-none select-none">
+                         <FlaskConical className="w-40 h-40 text-slate-100 rotate-[30deg]" strokeWidth={1} />
                     </div>
                 </div>
-                {/* Decorative Icon (Beaker) - Watermark Style */}
-                <div className="absolute -right-11 -bottom-10 pointer-events-none select-none">
-                     <FlaskConical className="w-60 h-60 text-teal-200 opacity-30 rotate-[20deg]" strokeWidth={2} />
+            </div>
+
+            {/* === 方案 B：科技漸層風 (Tech Gradient) === */}
+            <div className="mb-12 relative">
+                {/* Label for Demo */}
+                <div className="absolute -top-6 left-0 text-[10px] text-blue-600 font-mono tracking-widest bg-blue-50 px-2 py-0.5 rounded">方案 B (科技漸層)</div>
+
+                <div className="bg-gradient-to-r from-slate-50 to-white p-8 rounded-lg border-l-4 border-teal-600 relative overflow-hidden">
+                    <div className="relative z-10">
+                        <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">
+                            微量吸管 / 移液槍
+                        </h1>
+                        <p className="text-slate-600 max-w-2xl leading-relaxed text-sm mb-6">
+                             提供 Gilson, Eppendorf, Thermo 等國際大廠品牌。全系列產品皆符合 ISO 8655 標準，並提供完整的維修校正服務，滿足您對實驗精準度的嚴苛要求。
+                        </p>
+                        <div className="flex gap-3">
+                           <button className="text-xs font-bold text-white bg-teal-600 px-4 py-2 rounded hover:bg-teal-700 transition-colors">
+                              查看所有型號
+                           </button>
+                           <button className="text-xs font-bold text-teal-600 border border-teal-600 px-4 py-2 rounded hover:bg-teal-50 transition-colors">
+                              下載選購指南
+                           </button>
+                        </div>
+                    </div>
+                     {/* Decorative Icon: Slightly different position for variety, but same props */}
+                    <div className="absolute -right-10 -bottom-8 pointer-events-none select-none">
+                         <FlaskConical className="w-40 h-40 text-teal-50/60 rotate-[30deg]" strokeWidth={1} />
+                    </div>
+                </div>
+            </div>
+
+            {/* === 方案 C：資訊卡片風 (Info Card) === */}
+            <div className="mb-12 relative">
+                {/* Label for Demo */}
+                <div className="absolute -top-6 left-0 text-[10px] text-slate-500 font-mono tracking-widest bg-slate-100 px-2 py-0.5 rounded">方案 C (資訊卡片)</div>
+
+                <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 relative overflow-hidden">
+                    <div className="flex flex-col md:flex-row gap-6 relative z-10">
+                        <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-3 text-slate-400 font-medium text-xs">
+                                <Info className="w-4 h-4" />
+                                <span>CATEGORY OVERVIEW</span>
+                            </div>
+                            <h1 className="text-2xl font-bold text-slate-800 mb-3">
+                                微量吸管 (Micropipettes)
+                            </h1>
+                            <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                                精密液體處理的核心工具。涵蓋單爪、多爪與電動系列，適用於分生實驗與化學分析。
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                <span className="px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-600">Gilson</span>
+                                <span className="px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-600">Eppendorf</span>
+                                <span className="px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-600">Thermo</span>
+                            </div>
+                        </div>
+                        {/* Right Side Stats/Links */}
+                        <div className="md:w-1/3 border-t md:border-t-0 md:border-l border-slate-200 pt-4 md:pt-0 md:pl-6 flex flex-col justify-center">
+                            <div className="mb-3">
+                                <span className="text-xs text-slate-400 block mb-1">現有型號</span>
+                                <span className="text-xl font-bold text-teal-600">42+ Items</span>
+                            </div>
+                            <div>
+                                <span className="text-xs text-slate-400 block mb-1">服務支援</span>
+                                <span className="text-sm font-medium text-slate-700">原廠維修 / 年度校正</span>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Decorative Icon */}
+                    <div className="absolute -right-8 -bottom-12 pointer-events-none select-none opacity-50">
+                         <FlaskConical className="w-40 h-40 text-slate-200 rotate-[30deg]" strokeWidth={1} />
+                    </div>
                 </div>
             </div>
 
