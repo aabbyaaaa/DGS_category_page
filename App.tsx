@@ -148,7 +148,7 @@ export default function App() {
                     </div>
                 </div>
                 {/* Decorative Icon (Beaker) - Watermark Style */}
-                <div className="absolute right-0 -bottom-10 pointer-events-none select-none">
+                <div className="absolute -right-11 -bottom-10 pointer-events-none select-none">
                      <FlaskConical className="w-60 h-60 text-teal-200 opacity-30 rotate-[20deg]" strokeWidth={2} />
                 </div>
             </div>
